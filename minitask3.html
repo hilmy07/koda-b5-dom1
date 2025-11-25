@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minitask 3</title>
+  </head>
+  <body>
+    <script>
+      const title = document.createElement("h1");
+      title.innerText = "Form Survei Perokok";
+      title.style.textAlign = "center";
+
+      // body style
+      const body = document.querySelector("body");
+      body.style.backgroundColor = "#beb0eb";
+
+      const form = document.createElement("form");
+      form.action = "dataTabel.html";
+      form.method = "GET";
+      form.style.width = "300px"; // Lebar tetap
+      form.style.height = "350px";
+      form.style.margin = "20px auto"; // Pusatkan form secara horizontal
+      form.style.textAlign = "left"; // Label & input rata kiri
+      form.style.backgroundColor = "white";
+      form.style.padding = "50px";
+      form.style.borderRadius = "10px";
+
+      // Label nama
+      const labelNama = document.createElement("label");
+      labelNama.setAttribute("for", "nama");
+      labelNama.innerText = "Siapa nama anda?";
+      labelNama.style.fontSize = "20px";
+
+      // Input nama
+      const inputNama = document.createElement("input");
+      inputNama.type = "text";
+      inputNama.id = "nama";
+      inputNama.name = "nama";
+      inputNama.style.width = "100%"; // input lebar penuh form
+      inputNama.style.padding = "5px";
+      inputNama.style.marginTop = "5px";
+      inputNama.style.boxSizing = "border-box";
+
+      // Label umur
+      const labelUmur = document.createElement("label");
+      labelUmur.setAttribute("for", "umur");
+      labelUmur.innerText = "Berapa umur anda?";
+      labelUmur.style.fontSize = "20px";
+
+      // Input umur
+      const inputUmur = document.createElement("input");
+      inputUmur.type = "text";
+      inputUmur.id = "umur";
+      inputUmur.name = "umur";
+      inputUmur.style.width = "100%";
+      inputUmur.style.padding = "5px";
+      inputUmur.style.marginTop = "5px";
+      inputUmur.style.boxSizing = "border-box";
+
+      // Label jenis kelamin
+      const labelJenisKelamin = document.createElement("label");
+      labelJenisKelamin.setAttribute("for", "jenis-kelamin");
+      labelJenisKelamin.innerText = "Apa jenis kelamin anda?";
+      labelJenisKelamin.style.fontSize = "20px";
+
+      //input jenis kelamin
+      const inputJenisKelaminLaki = document.createElement("input");
+      inputJenisKelaminLaki.type = "radio";
+      inputJenisKelaminLaki.id = "laki-laki";
+      inputJenisKelaminLaki.name = "jenis-kelamin";
+      inputJenisKelaminLaki.value = "laki-laki";
+
+      // Label jenis kelamin laki-laki
+      const labelJenisKelaminLaki = document.createElement("label");
+      labelJenisKelaminLaki.setAttribute("for", "laki-laki");
+      labelJenisKelaminLaki.innerText = "Laki-laki";
+
+      //input jenis kelamin perempuan
+      const inputJenisKelaminPerempuan = document.createElement("input");
+      inputJenisKelaminPerempuan.type = "radio";
+      inputJenisKelaminPerempuan.id = "perempuan";
+      inputJenisKelaminPerempuan.name = "jenis-kelamin";
+      inputJenisKelaminPerempuan.value = "perempuan";
+
+      // Label jenis kelamin perempuan
+      const labelJenisKelaminPerempuan = document.createElement("label");
+      labelJenisKelaminPerempuan.setAttribute("for", "perempuan");
+      labelJenisKelaminPerempuan.innerText = "Perempuan";
+
+      // Label perokok
+      const labelPerokok = document.createElement("label");
+      labelPerokok.setAttribute("for", "perokok");
+      labelPerokok.innerText = "Apakah anda perokok?";
+      labelPerokok.style.fontSize = "20px";
+
+      //input ya
+      const inputYa = document.createElement("input");
+      inputYa.type = "radio";
+      inputYa.id = "yaPerokok";
+      inputYa.name = "perokok";
+      inputYa.value = "ya";
+
+      // Label ya
+      const labelYa = document.createElement("label");
+      labelYa.setAttribute("for", "yaPerokok");
+      labelYa.innerText = "Ya";
+
+      //input tidak
+      const inputTidak = document.createElement("input");
+      inputTidak.type = "radio";
+      inputTidak.id = "tidakPerokok";
+      inputTidak.name = "perokok";
+      inputTidak.value = "tidak";
+
+      // Label tidak
+      const labelTidak = document.createElement("label");
+      labelTidak.setAttribute("for", "tidakPerokok");
+      labelTidak.innerText = "Tidak";
+
+      // Label jenis rokok
+      const labelJenisRokok = document.createElement("label");
+      labelJenisRokok.setAttribute("for", "jenisRokok");
+      labelJenisRokok.innerText = "Jenis rokok apa yang dikonsumsi?";
+      labelJenisRokok.style.fontSize = "20px";
+
+      //input Gudang Garam Filter
+      const inputGudangGaramFilter = document.createElement("input");
+      inputGudangGaramFilter.type = "checkbox";
+      inputGudangGaramFilter.id = "gudang-garam-filter";
+      inputGudangGaramFilter.name = "jenisRokok";
+      inputGudangGaramFilter.value = "Gudang Garam Filter";
+
+      // Label Gudang Garam Filter
+      const labelGudangGaramFilter = document.createElement("label");
+      labelGudangGaramFilter.setAttribute("for", "gudang-garam-filter");
+      labelGudangGaramFilter.innerText = "Gudang Garam Filter";
+
+      //input Lucky Strike
+      const inputLuckyStrike = document.createElement("input");
+      inputLuckyStrike.type = "checkbox";
+      inputLuckyStrike.id = "lucky-strike";
+      inputLuckyStrike.name = "jenisRokok";
+      inputLuckyStrike.value = "Lucky Strike";
+
+      // Label Lucky Strike
+      const labelLuckyStrike = document.createElement("label");
+      labelLuckyStrike.setAttribute("for", "lucky-strike");
+      labelLuckyStrike.innerText = "Lucky Strike";
+
+      //input Marlboro
+      const inputMarlboro = document.createElement("input");
+      inputMarlboro.type = "checkbox";
+      inputMarlboro.id = "marlboro";
+      inputMarlboro.name = "jenisRokok";
+      inputMarlboro.value = "Marlboro";
+
+      // Label Marlboro
+      const labelMarlboro = document.createElement("label");
+      labelMarlboro.setAttribute("for", "marlboro");
+      labelMarlboro.innerText = "Marlboro";
+
+      //input Esse
+      const inputEsse = document.createElement("input");
+      inputEsse.type = "checkbox";
+      inputEsse.id = "esse";
+      inputEsse.name = "jenisRokok";
+      inputEsse.value = "Esse";
+
+      // Label Esse
+      const labelEsse = document.createElement("label");
+      labelEsse.setAttribute("for", "esse");
+      labelEsse.innerText = "Esse";
+
+      // Button submit
+      const btnSubmit = document.createElement("button");
+      btnSubmit.type = "submit";
+      btnSubmit.innerText = "Submit";
+      btnSubmit.style.marginTop = "10px";
+      btnSubmit.style.marginRight = "10px";
+
+      // Button reset
+      const btnReset = document.createElement("button");
+      btnReset.type = "reset";
+      btnReset.innerText = "Reset";
+      btnReset.style.marginTop = "10px";
+
+      // Line break
+      const br = document.createElement("br");
+
+      // Append ke form nama
+      form.appendChild(labelNama);
+      form.appendChild(br);
+      form.appendChild(inputNama);
+
+      // Append ke form umur
+      form.appendChild(labelUmur);
+      form.appendChild(br);
+      form.appendChild(inputUmur);
+
+      // Append ke form jenis kelamin
+      form.appendChild(labelJenisKelamin);
+      form.appendChild(br);
+      form.appendChild(inputJenisKelaminLaki);
+      form.appendChild(labelJenisKelaminLaki);
+      form.appendChild(inputJenisKelaminPerempuan);
+      form.appendChild(labelJenisKelaminPerempuan);
+      form.appendChild(document.createElement("br"));
+
+      // Append ke form perokok
+      form.appendChild(labelPerokok);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(inputYa);
+      form.appendChild(labelYa);
+      form.appendChild(inputTidak);
+      form.appendChild(labelTidak);
+      form.appendChild(document.createElement("br"));
+
+      // Append ke jenis rokok
+      form.appendChild(labelJenisRokok);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(inputGudangGaramFilter);
+      form.appendChild(labelGudangGaramFilter);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(inputLuckyStrike);
+      form.appendChild(labelLuckyStrike);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(inputMarlboro);
+      form.appendChild(labelMarlboro);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(inputEsse);
+      form.appendChild(labelEsse);
+
+      // Append button ke form, setelah input jenis rokok
+      form.appendChild(document.createElement("br"));
+      form.appendChild(btnSubmit);
+      form.appendChild(btnReset);
+
+      // Append ke form jenis rokok
+
+      document.body.prepend(form);
+      document.body.prepend(title);
+    </script>
+  </body>
+</html>
