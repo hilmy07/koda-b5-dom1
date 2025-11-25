@@ -3,57 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Minitask 1</title>
   </head>
   <body>
-    <!-- program konversi suhu dgn dom dan selector dan node object -->
-    <h1>Konversi Suhu</h1>
-    <table id="suhuTable" style="border: 1px solid black">
-      <tr>
-        <td style="border: 1px solid black">Celcius</td>
-        <td style="border: 1px solid black">Fahrenheit</td>
-        <td style="border: 1px solid black">Reamur</td>
-        <td style="border: 1px solid black">Kelvin</td>
-      </tr>
-    </table>
-    <script type="module">
-      //   const konversi = {
-      //     fahrenheit: function (c) {
-      //       return (c * 9) / 5 + 32;
-      //     },
-      //     reamur: function (c) {
-      //       return (c * 4) / 5;
-      //     },
-      //     kelvin: function (c) {
-      //       return c + 273.15;
-      //     },
-      //   };
-      import { fahrenheit } from "./js/fahrenheit.js";
-      import { kelvin } from "./js/kelvin.js";
-      import { reamur } from "./js/reamur.js";
-
-      const celsiusList = [50, 70, 100, 30];
-
-      const table = document.getElementById("suhuTable");
-
-      celsiusList.forEach((c) => {
-        const row = table.insertRow();
-        const cell1 = row.insertCell();
-        cell1.textContent = c;
-        cell1.style.border = "1px solid black";
-
-        const cell2 = row.insertCell();
-        cell2.textContent = fahrenheit.hitung(c).toFixed(2);
-        cell2.style.border = "1px solid black";
-
-        const cell3 = row.insertCell();
-        cell3.textContent = reamur.hitung(c).toFixed(2);
-        cell3.style.border = "1px solid black";
-
-        const cell4 = row.insertCell();
-        cell4.textContent = kelvin.hitung(c).toFixed(2);
-        cell4.style.border = "1px solid black";
-      });
-    </script>
+    <header>
+      <!-- program konversi suhu dgn dom dan selector dan node object -->
+      <h1>Konversi Suhu Celcius</h1>
+    </header>
+    <main>
+      <form action="submit">
+        <label for="input">Input suhu</label><br />
+        <input type="number" name="input" id="input" />
+        <button type="submit">submit</button>
+      </form>
+      <h1>Hasil Data</h1>
+      <table id="suhuTable" style="border: 1px solid black">
+        <thead>
+          <tr>
+            <th style="border: 1px solid black">Celcius</th>
+            <th style="border: 1px solid black">Fahrenheit</th>
+            <th style="border: 1px solid black">Reamur</th>
+            <th style="border: 1px solid black">Kelvin</th>
+          </tr>
+        </thead>
+      </table>
+    </main>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
