@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minitask 2</title>
+    <style>
+      body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      div > div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        /* background-color: grey; */
+      }
+
+      div {
+        display: flex;
+        gap: 3px;
+        width: 370px;
+        height: 130px;
+        background-color: rgb(23, 22, 22);
+        padding: 10px;
+        border-radius: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Traffic Light</h1>
+    </header>
+
+    <main>
+      <div>
+        <div id="lampu-merah"></div>
+        <div id="lampu-kuning"></div>
+        <div id="lampu-hijau"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { main } from "./js/traffic.js";
+
+      main();
+    </script>
+  </body>
+</html>
